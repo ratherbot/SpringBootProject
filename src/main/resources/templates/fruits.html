@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{page.fruits.title}">Fruits</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1 th:text="#{page.fruits.title}">Fruits</h1>
+<ul>
+    <li th:each="f : ${fruits}" th:text="${f.name} + ' — ' + ${f.price}">Apple — 1.00</li>
+</ul>
+</body>
+</html>
